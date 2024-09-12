@@ -6,14 +6,18 @@
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+
+
 a {
-    color: $primary-color;
+    color:inherit;
     text-decoration: none;
     white-space: nowrap;
     &:visited {
         color: $primary-color;
     }
 }
+
+
 
 .container {
     max-width: 1152px;
@@ -23,6 +27,8 @@ a {
 .cards-container {
 max-width: 1344px;
 }
+
+
 
 
 
@@ -36,10 +42,50 @@ max-width: 1344px;
 
     &__hammenu {
         display: none;
+        position: relative;
+        z-index: 3;
+        align-items: center;
         width: 50px;
-        height: 50px;
-        img {
-            height: 100%;
+        height: 18px;
+
+        &::before, &::after {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 55%;
+            background-color: $primary-color;
+            transition: 0.5s;
+        }
+
+        &::before {
+            top: 0;
+        }
+
+        &::after {
+            bottom:0;
+        }
+        &__span {
+            transform: scale(1);
+            height: 2px;
+            width: 55%;
+            background-color: $primary-color;
+        }
+        &__active {
+            span {
+                transform: scale(0);
+            }
+
+            &::before {
+                top: 50%;
+                transform: rotate(45deg);
+                background-color: white;
+            }
+
+            &::after {
+                top: 50%;
+                transform: rotate(-45deg);
+                background-color: white;
+            }
         }
     }
     &__container {
@@ -108,6 +154,11 @@ max-width: 1344px;
         }
     }
 }
+
+.active {
+    display: flex;
+}
+
 
 .main {
     font-size: 1.5rem;
@@ -198,13 +249,62 @@ max-width: 1344px;
 
 .icon {
     transform: rotate(180deg);
+    margin-left: 0.4rem;
 }
 
-// .author {
-//     font-size:10px ;
-//     position: relative;
-//     top: 40%;
-// text-align: center;
-// color: #6db33f;
-// }
 
+.menu__header {
+    position: relative;
+    display: inline-block;
+    padding-right: 10px;
+
+    &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        border-right: 2px solid black;
+        border-bottom: 2px solid black;
+        transform: rotate(45deg) translateY(-50%);
+    }
+}
+
+.search-container {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  #search-input {
+    margin-top:1.3rem;
+    width: 100%;
+    max-width: 400px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+
+  @media (max-width: 600px) {
+    #search-input {
+      max-width: 300px;
+      font-size: 14px;
+      padding: 8px;
+    }
+  }
+
+
+  @media (max-width: 320px) {
+    #search-input {
+      max-width: 90%;
+      font-size: 13px;
+      padding: 7px;
+      border-radius: 8px;
+    }
+
+    .search-container {
+      margin-bottom: 15px;
+    }
+  }

@@ -56,6 +56,89 @@
         min-width: 750px;
         padding: 0 5px;
     }
+
+    .header__navigation {
+        display: none;
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        z-index: 3;
+        overflow-y: auto;
+        background-color: #191e1e;
+        padding: 4rem 4rem;
+    }
+    .header__navigation--active {
+        display: flex;
+        position: fixed;
+    }
+    .header__navigation__menu {
+        padding-top: 4rem;
+        width: 100%;
+        font-size: 2rem;
+        flex-direction: column;
+        row-gap: 3rem;
+
+    }
+    .header__navigation__menu__item{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    }
+
+    .header__navigation__menu__item__link {
+        width: 100%;
+        border-bottom: solid 0.56px #404141;
+        padding-bottom: 0.2rem;
+    }
+
+    .header__hammenu {
+        display: flex;
+        z-index: 4;
+        position: fixed;
+        right: 0;
+    }
+
+    .header__navigation__menu__item__link{
+        color:white !important;
+    }
+
+
+    .menu__header {
+        display: flex;
+    }
+
+
+    .menu__header::after {
+        border-color: white;
+        height: 20px;
+        width: 20px;
+        right: 1rem;
+    }
+
+
+    .header__navigation__menu__item:hover .header__navigation__submenu  {
+        display: none;
+    }
+
+
+
+    .header__navigation__submenu {
+        background-color: #191e1e;
+        position: static;
+        width: 100%;
+        box-shadow: none;
+
+    }
+
+    .header__navigation__submenu li {
+        padding: 0.5rem 0;
+
+    }
+    .header__navigation__submenu li a {
+        color: #98afae ;
+        font-size: 1.5rem;
+    }
 }
 
 
@@ -75,13 +158,11 @@
         min-width:fit-content;
         width: 100%;
     }
+
     .header__navigation {
-        display: none;
+        padding: 4rem 2rem;
     }
 
-    .header__hammenu {
-        display: block;
-    }
 
     .main__cards__article {
         max-width: fit-content;
