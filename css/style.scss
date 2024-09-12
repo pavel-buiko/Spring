@@ -28,7 +28,9 @@ a {
 max-width: 1344px;
 }
 
-
+.ovrlwHidden {
+    overflow: hidden;
+}
 
 
 
@@ -71,6 +73,7 @@ max-width: 1344px;
             background-color: $primary-color;
         }
         &__active {
+
             span {
                 transform: scale(0);
             }
