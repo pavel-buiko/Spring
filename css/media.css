@@ -121,6 +121,10 @@
         display: none;
     }
 
+    .header__navigation__menu__item.active .header__navigation__submenu  {
+        display: block;
+    }
+
 
 
     .header__navigation__submenu {

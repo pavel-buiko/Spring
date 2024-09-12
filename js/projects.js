@@ -62,7 +62,7 @@ function renderArticles(filteredArticles) {
 renderArticles(articles);
 
 
-//как мне больно от её вида
+//Thats kind of pain to undertand
 function debounce(func, delay) {
   return function(...args) {
     clearTimeout(timeoutId);

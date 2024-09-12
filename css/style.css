@@ -40,6 +40,10 @@ a:visited {
   max-width: 1344px;
 }
 
+.ovrlwHidden {
+  overflow: hidden;
+}
+
 .header {
   height: 9vh;
   display: flex;
