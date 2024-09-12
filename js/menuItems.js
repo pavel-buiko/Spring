@@ -1,4 +1,4 @@
-const menuItems = [
+ const menuItems = [
     {
         header: "Why Spring",
         list: [
@@ -60,3 +60,5 @@ const menuItems = [
         ]
     }
 ];
+
+export default menuItems
