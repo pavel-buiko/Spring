@@ -61,10 +61,9 @@ function renderArticles(filteredArticles) {
 
 renderArticles(articles);
 
-
-//Thats kind of pain to undertand
+// Thats kind of pain to undertand
 function debounce(func, delay) {
-  return function(...args) {
+  return function (...args) {
     clearTimeout(timeoutId);
     timeoutId = setTimeout(() => {
       func.apply(this, args);

@@ -12,6 +12,6 @@ menuItems.forEach((item) => {
 
 burger.addEventListener("click", () => {
   burger.classList.toggle("header__hammenu__active");
-  document.body.classList.toggle("ovrlwHidden");
+  document.body.classList.toggle("overflowHidden");
   nav.classList.toggle("header__navigation--active");
 });
